@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THÔNG TIN CÁ NHÂN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        audio, video {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>THÔNG TIN CÁ NHÂN</h2>
+    <p><strong>Họ và tên:</strong> Dương Hoàng Vũ</p>
+    <p><strong>Mã sinh viên:</strong> K215480106069</p>
+    <p><strong>Trường:</strong> Trường Đại Học Kỹ Thuật Công Nghiệp - TNUT</p>
+
+    <h2>Nghe nhạc</h2>
+    <audio controls>
+        <source src="file:///android_asset/audio.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
+
+    <h2>Xem video</h2>
+    <video id="videoPlayer" controls>
+        <source src="video.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var video = document.getElementById("videoPlayer");
+        video.play().catch(error => {
+            console.log("Tự động phát bị chặn, yêu cầu người dùng nhấn Play.");
+        });
+    });
+</script>
+</body>
+</html>
